@@ -4,7 +4,7 @@ import { useNavigate } from "react-router";
 const initialState = {
     boxSize: 'Small',
     boxOwner: '',
-}
+};
 
 const MailboxForm = (props) => {
     const [formData, setFormData] = useState(initialState);
@@ -19,7 +19,7 @@ const MailboxForm = (props) => {
     }
 
     const handleChange = (event) => {
-        setFormData({...formData, [event.target.name]: event.target.value})
+        setFormData({...formData, [event.target.name]: event.target.value});
     }
 
     return (
@@ -43,7 +43,7 @@ const MailboxForm = (props) => {
                 <button type="submit">Submit</button>
             </form>
         </main>
-    )
-}
+    );
+};
 
 export default MailboxForm;

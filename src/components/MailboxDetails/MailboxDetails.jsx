@@ -23,6 +23,17 @@ const MailboxDetails = (props) => {
                 <dd>{selectedMailbox.boxSize}</dd>
                 </div>
             </dl>
+            <h2>Letters</h2>
+            <dl>
+            {props.letters.map((letter, index) => (
+                Number(letter.mailboxId) === selectedMailbox._id ? 
+                <div key={index}>
+                    <p>Dear {letter.recipient},</p>
+                    <p>{letter.message}</p>
+                </div> : ''
+            ))}
+            </dl>
+
         </>
 
     )
